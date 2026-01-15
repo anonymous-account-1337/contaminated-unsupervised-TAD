@@ -1,0 +1,19 @@
+{
+  "default": {
+    "exp_type": "isolation-forest",
+    "plot": false,
+    "output_folder": "results/isolation_forest"
+  },
+  "experiments": [
+    {
+      "n_estimators": 100,
+      "max_samples": 1.0,
+      "max_features": 1.0,
+      "contamination": "auto",
+      "grid_search": {
+        "seed": [47, 48, 49],
+        "root_path": ["dataset/voltage-main/voltage-l-ar0.0", "dataset/voltage-main/voltage-l-ar2.5", "dataset/voltage-main/voltage-l-ar5.0", "dataset/voltage-main/voltage-l-ar7.5", "dataset/voltage-main/voltage-l-ar10.0", "dataset/voltage-main/voltage-l-ar20.0", "dataset/voltage-main/voltage-l-ar30.0", "dataset/voltage-main/voltage-l-ar40.0"]
+      }
+    }
+  ]
+}

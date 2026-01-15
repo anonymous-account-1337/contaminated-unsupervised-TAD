@@ -1,0 +1,69 @@
+{
+  "default": {
+    "_gpu": "cuda:1",
+    "_plot": false,
+    "batch_size": 32,
+    "train_epochs": 32,
+    "patience": null,
+    "learning_rate": 0.001,
+    "output_folder": "results/task_quadratic",
+    "seq_len": 100,
+    "enc_in": 1,
+    "c_out": 1
+  },
+  "experiments": [
+    {
+      "model": "USAD",
+      "latent_size": 16,
+      "grid_search": {
+        "seed": [47, 48, 49],
+        "root_path": ["dataset/voltage-quadratic/voltage-l-ar0.0", "dataset/voltage-quadratic/voltage-l-ar2.5", "dataset/voltage-quadratic/voltage-l-ar5.0", "dataset/voltage-quadratic/voltage-l-ar7.5", "dataset/voltage-quadratic/voltage-l-ar10.0", "dataset/voltage-quadratic/voltage-l-ar20.0", "dataset/voltage-quadratic/voltage-l-ar30.0", "dataset/voltage-quadratic/voltage-l-ar40.0"]
+      }
+    },
+    {
+      "model": "TranAD",
+      "embed_type": "conv",
+      "embed_kernel_size": 3,
+      "layer_norm": true,
+      "epsilon": 1.05,
+      "n_heads": 2,
+      "d_model": 64,
+      "d_ff": 512,
+      "dropout": 0.0,
+      "grid_search": {
+        "seed": [47, 48, 49],
+        "root_path": ["dataset/voltage-quadratic/voltage-l-ar0.0", "dataset/voltage-quadratic/voltage-l-ar2.5", "dataset/voltage-quadratic/voltage-l-ar5.0", "dataset/voltage-quadratic/voltage-l-ar7.5", "dataset/voltage-quadratic/voltage-l-ar10.0", "dataset/voltage-quadratic/voltage-l-ar20.0", "dataset/voltage-quadratic/voltage-l-ar30.0", "dataset/voltage-quadratic/voltage-l-ar40.0"]
+      }
+    },
+    {
+      "model": "Transformer",
+      "embed_type": "conv",
+      "embed_kernel_size": 3,
+      "activation": "relu",
+      "e_layers": 1,
+      "n_heads": 8,
+      "d_model": 64,
+      "d_ff": 128,
+      "dropout": 0.0,
+      "grid_search": {
+        "seed": [47, 48, 49],
+        "root_path": ["dataset/voltage-quadratic/voltage-l-ar0.0", "dataset/voltage-quadratic/voltage-l-ar2.5", "dataset/voltage-quadratic/voltage-l-ar5.0", "dataset/voltage-quadratic/voltage-l-ar7.5", "dataset/voltage-quadratic/voltage-l-ar10.0", "dataset/voltage-quadratic/voltage-l-ar20.0", "dataset/voltage-quadratic/voltage-l-ar30.0", "dataset/voltage-quadratic/voltage-l-ar40.0"]
+      }
+    },
+    {
+      "model": "TimesNet",
+      "embed_type": "conv",
+      "embed_kernel_size": 3,
+      "top_k": 2,
+      "num_kernels": 4,
+      "e_layers": 1,
+      "d_model": 64,
+      "d_ff": 64,
+      "dropout": 0.0,
+      "grid_search": {
+        "seed": [47, 48, 49],
+        "root_path": ["dataset/voltage-quadratic/voltage-l-ar0.0", "dataset/voltage-quadratic/voltage-l-ar2.5", "dataset/voltage-quadratic/voltage-l-ar5.0", "dataset/voltage-quadratic/voltage-l-ar7.5", "dataset/voltage-quadratic/voltage-l-ar10.0", "dataset/voltage-quadratic/voltage-l-ar20.0", "dataset/voltage-quadratic/voltage-l-ar30.0", "dataset/voltage-quadratic/voltage-l-ar40.0"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "default": {
+    "_gpu": "cuda:1",
+    "_plot": false,
+    "batch_size": 32,
+    "train_epochs": 32,
+    "patience": null,
+    "learning_rate": 0.001,
+    "output_folder": "results/ablation_latent_size",
+    "seq_len": 100,
+    "enc_in": 1,
+    "c_out": 1
+  },
+  "experiments": [
+    {
+      "model": "USAD",
+      "grid_search": {
+        "seed": [47, 48, 49],
+        "latent_size": [8, 16, 32, 64],
+        "root_path": ["dataset/voltage-main/voltage-l-ar0.0", "dataset/voltage-main/voltage-l-ar2.5", "dataset/voltage-main/voltage-l-ar5.0", "dataset/voltage-main/voltage-l-ar7.5", "dataset/voltage-main/voltage-l-ar10.0", "dataset/voltage-main/voltage-l-ar20.0", "dataset/voltage-main/voltage-l-ar30.0", "dataset/voltage-main/voltage-l-ar40.0"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "default": {
+    "exp_type": "z-score",
+    "output_folder": "results/z_score"
+  },
+  "experiments": [
+    {
+      "grid_search": {
+        "root_path": ["dataset/voltage-main/voltage-l-ar0.0", "dataset/voltage-main/voltage-l-ar2.5", "dataset/voltage-main/voltage-l-ar5.0", "dataset/voltage-main/voltage-l-ar7.5", "dataset/voltage-main/voltage-l-ar10.0", "dataset/voltage-main/voltage-l-ar20.0", "dataset/voltage-main/voltage-l-ar30.0", "dataset/voltage-main/voltage-l-ar40.0"]
+      }
+    }
+  ]
+}
